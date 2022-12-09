@@ -17,14 +17,15 @@
   justify-content: center;
 }
 
-.logo_place_header {
+.logo {
   width: 228px;
   height: 32px;
+}
+
+.logo_place_header {
+  position: absolute;
   top: 30px;
   left: 64px;
-  position: absolute;
-  font-weight: bold;
-  font-size: 20px;
   z-index: 2;
 }
 
@@ -82,13 +83,13 @@
   justify-content: center;
 }
 
-.description__two-columns {
+.two-columns {
   display: flex;
   justify-content: space-between;
   width: 80%;
 }
 
-.description__two-columns_brief {
+.two-columns__brief {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.2;
@@ -97,12 +98,12 @@
   color: #2f80ed;
 }
 
-.description__two-columns_main-text {
+.two-columns__main-text {
   width: 80%;
   min-width: 784px;
 }
 
-.description__two-columns_paragraph {
+.two-columns__paragraph {
   font-weight: normal;
   font-size: 24px;
   line-height: 34px;
@@ -110,11 +111,11 @@
   padding-top: 30px;
 }
 
-.description__two-columns_paragraph:first-child {
+.two-columns__paragraph:first-child {
   padding-top: 0;
 }
 
-.description__two-columns_span-accent {
+.two-columns__span-accent {
   font-weight: 600;
   font-size: 24px;
   line-height: 34px;
@@ -123,13 +124,13 @@
 .digits {
   margin: 0;
   padding: 100px 0;
-  display: flex;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.digits__section-title {
+.section-title {
   margin: 0;
   padding: 0 0 20px 0;
   width: 60%;
@@ -140,7 +141,7 @@
   font-weight: 600;
 }
 
-.digits__section-subtitle {
+.section-subtitle {
   margin: 0;
   padding: 0;
   width: 60%;
@@ -185,10 +186,10 @@
 .feynman {
   position: relative;
   flex-direction: column;
-  height: 890px;
+  min-height: 890px;
   display: flex;
   align-items: center;
-  z-index: -2;
+  background-color: #f2f2f2;
 }
 
 .feynman__title {
@@ -198,6 +199,7 @@
   font-size: 120px;
   line-height: 1.15;
   text-align: center;
+  z-index: 1;
 }
 
 .feynman__subtitle {
@@ -205,6 +207,7 @@
   font-weight: normal;
   font-size: 36px;
   line-height: 51px;
+  z-index: 1;
 }
 
 .feynman__link {
@@ -215,6 +218,7 @@
   font-size: 36px;
   line-height: 51px;
   text-decoration: none;
+  color: #2f80ed;
 }
 
 .feynman__main-illustration {
@@ -224,77 +228,53 @@
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: -1;
 }
 
 .kaufman {
   margin: 0;
   padding: 90px 0 90px 0;
-  display: flex;
   box-sizing: border-box;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #1f1f1f;
   position: relative;
-  z-index: -2;
   overflow: hidden;
+  background-color: #1f1f1f;
 }
 
-.kaufman__section-title {
-  margin: 0;
-  padding-bottom: 20px;
+.section-title_theme_dark {
   color: white;
-  z-index: 2;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 600;
 }
 
-.kaufman__section-subtitle {
-  margin: 0;
+.section-subtitle_theme_dark {
   color: white;
-  z-index: 2;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
 }
 
 .table_theme_dark {
-  line-height: 1.15px;
-  font-size: 24px;
-  font-weight: 600;
-  color: white;
-  z-index: 2;
+  z-index: 1;
 }
 
 .table__cell_theme_dark {
-  margin: 0;
   padding-top: 80px;
   width: 200px;
 }
 
 .table__heading_theme_dark {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 24px;
-  font-weight: 600;
+  color: white;
 }
 
 .table__text_theme_dark {
-  margin: 0;
-  padding-top: 20px;
-  line-height: 1.2;
-  font-size: 18px;
-  font-weight: normal;
+  color: white;
 }
 
-.caufman__triangle {
+.kaufman__triangle {
   position: absolute;
   top: 0;
   right: -210px;
-  z-index: 0;
   width: 877px;
   height: 877px;
+  background-image: url(../images/kaufman-triangle.svg);
+  background-size: contain;
 }
 
 .footer {
@@ -303,6 +283,7 @@
   display: flex;
   justify-content: center;
   background-color: #1f1f1f;
+  min-height: 350px;
 }
 
 .footer__columns {
@@ -312,7 +293,6 @@
   flex-direction: row;
   justify-content: space-between;
   color: white;
-  min-height: 350px;
   box-sizing: border-box;
 }
 
@@ -324,8 +304,7 @@
 }
 
 .logo__place_footer {
-  width: 228px;
-  height: 32px;
+  color: white;
 }
 
 .footer__author {
